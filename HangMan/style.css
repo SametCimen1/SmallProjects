@@ -43,3 +43,7 @@ margin-top: 5%;
 .buttons button:hover{
     background-color: rgb(117, 181, 255);
 }
+
+.word{
+    font-size:1.4em
+}

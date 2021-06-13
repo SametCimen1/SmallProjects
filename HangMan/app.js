@@ -12,6 +12,8 @@ var mySubject = document.querySelector(".guessWhat");
 var numOfWrong = 0;
 var buttons = document.querySelectorAll(".button");
 var hangMan = document.querySelector(".myImage");
+
+
 window.onload=function(){
     getWord();
 }
@@ -31,22 +33,27 @@ const getWord = () =>{
     mySubject.textContent = "Guess the "+subject;
     console.log(`${subject} ${word}`);
     addEvent();
-    
+    showWords();
+    var varGetWord = document.querySelector(".word").textContent.split(" ");
+    console.log(varGetWord);
 }
 const isItInTheWord = (myWord)=>{
-  let bool = letter.some(temp =>{
+  let myArr = [];
+    letter.forEach((temp, index) =>{
     if(myWord === temp){
-        return true;
+        myArr.push(index);
     }
   })
-  return bool;
+  return myArr;
   
 }
 
 const clicked = (e) =>{
-if(!(isItInTheWord(e.target.childNodes[0].data))){
+const myLetter = e.target.childNodes[0].data;
+const indexes = isItInTheWord(myLetter);
+if(indexes.length <= 0){
     numOfWrong ++;
-    if(numOfWrong === 6){
+    if(numOfWrong >= 7){
         let ans = document.querySelector(".answer");
         ans.textContent = "You lost answer was: " + word;
     }
@@ -54,12 +61,39 @@ if(!(isItInTheWord(e.target.childNodes[0].data))){
     hangMan.src = "img/"+numOfWrong+".png"
     }
 }
+// letter is in the word;
+else{
+  varGetWord = document.querySelector(".word").textContent.split(" ");
+  const getElem = document.querySelector(".word");
+  for(let i = 0; i<varGetWord.length; i++){
+      if(varGetWord[i] === "_"){
+         for(let x = 0; x<indexes.length; x++){
+            console.log(i + " " +  indexes[x])
+             if(i === indexes[x]){
+                varGetWord[i] = myLetter;
+                console.log(varGetWord);
+             }
+         }
+      }
+  }
+  getElem.textContent = varGetWord.join(" ");
+}
 }
 
 const addEvent = ()=>{
     for(let i = 0; i<buttons.length; i++){
         buttons[i].addEventListener("click", (e)=>{
             clicked(e);
+            buttons[i].disabled = "disabled";
+            buttons[i].style.backgroundColor = "red";
         })
     }
+}
+
+const showWords = () =>{
+    const myWord = document.querySelector(".word");
+    for(let i = 0; i<letter.length; i++){
+        myWord.textContent += "_ ";
+    } 
+
 }
