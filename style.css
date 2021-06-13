@@ -1,0 +1,34 @@
+html{
+    font-size: 20px;
+}
+
+body{
+    background-color: #343434;
+color: white;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    animation: h1MoveIn 2s ease-out;
+
+}
+@keyframes h1MoveIn {
+    0%{
+     
+        transform:rotateZ(360deg)
+    }
+    100%{
+    
+        transform:rotateZ(0deg)
+    }
+}
+span{
+   animation: games 4s infinite ;
+}
+@keyframes games {
+    0%{ color:aqua}
+    25%{ color:red}
+    50%{color:rgb(145, 255, 0)}
+    75%{color:rgb(245, 200, 0)}
+    100%{color:#ff00ea}
+}
