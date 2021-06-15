@@ -7,14 +7,22 @@ html{
 }
 
 body{
-    background-color: #36393f;
-color: white;
+
+    color: white;
+}
+.container{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url("img/try11.jpg");
+  background-position: center;
+  background-size:cover;
+  position: relative;
 }
 h1{
     text-align: center;
     font-size: 3rem;
     animation: h1MoveIn 3s ease-out;
-    margin-top: 1em;
+    
     font-family: 'Baloo Tammudu 2', cursive;
 }
 @keyframes h1MoveIn {
