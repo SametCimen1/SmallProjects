@@ -9,6 +9,7 @@ html{
 body{
 
     color: white;
+
 }
 .container{
   min-height: 100vh;
@@ -18,11 +19,23 @@ body{
   background-size:cover;
   position: relative;
 }
+header {
+ position:absolute;
+ text-align: center;
+ width: 100%;
+ margin: 0 auto;
+}
+.spin{
+    margin: 0 auto;
+}
+
 h1{
     text-align: center;
+    width: 90%;
     font-size: 3rem;
+    margin: 0 auto;
     animation: h1MoveIn 3s ease-out;
-    
+     overflow: hidden;
     font-family: 'Baloo Tammudu 2', cursive;
 }
 @keyframes h1MoveIn {
