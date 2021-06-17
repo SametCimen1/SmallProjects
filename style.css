@@ -2,60 +2,74 @@
     padding: 0;
     margin: 0;
 }
+
+:root{
+    --neon-text-color: rgb(4, 217, 245);
+
+}
 html{
     font-size: 20px;
 }
 
 body{
-
+ /*Change the img from PS. The left side and right side margin deosnt match*/
     color: white;
-
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url("img/try22.jpg");
+    background-position: center center;
+    background-size:cover;
+    background-attachment: fixed;
+    background-color: blakc;
 }
 .container{
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url("img/try11.jpg");
-  background-position: center;
-  background-size:cover;
-  position: relative;
 }
 header {
- position:absolute;
- text-align: center;
  width: 100%;
- margin: 0 auto;
-}
-.spin{
-    margin: 0 auto;
+
 }
 
-h1{
+
+ h1{
     text-align: center;
-    width: 90%;
+    width: 50%;
     font-size: 3rem;
     margin: 0 auto;
-    animation: h1MoveIn 3s ease-out;
-     overflow: hidden;
+    padding: 3rem 1rem 1rem;
     font-family: 'Baloo Tammudu 2', cursive;
+    border:0;
+    animation: flicker 1.5s infinite alternate;  
 }
-@keyframes h1MoveIn {
-    0%{
-        opacity: 0;
-        transform:rotateZ(360deg)
+@media screen and (min-width:700px){
+    h1{
+        font-size: 5rem;
     }
-   
-    100%{
-       opacity: 1;
-        transform:rotateZ(0deg)
+    body{
+        background-image: linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url("img/try11.jpg");
     }
 }
-span{
-   animation: games 4s  ease-in infinite ;
+@media screen and (max-width:400px){ /*for iphone x, delete later*/ 
+    body{
+        background-image: linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url("img/try33.jpg");
+    }
 }
-@keyframes games {
-    0%{ color:aqua}
-    25%{ color:red}
-    50%{color:rgb(145, 255, 0)}
-    75%{color:#ff00ea}
-    100%{color :aqua}
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);      
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
 }
