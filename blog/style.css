@@ -1,0 +1,114 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+main{
+    min-height: 98vh;
+    width: 100%;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(122, 123, 124, 0), rgba(0, 0, 0, 0.7)), url("img/background7.JPG");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: none;
+}
+.navBar{
+    display:flex; 
+    min-height: 50px;
+    width: 90%;
+    margin:0 auto;
+
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-button{   
+    display: none;
+    display: none;
+    position: absolute;
+    right:0;
+    top: 0;
+    border-radius: 9px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.toggle-button:hover{
+
+    background-color: white;
+}
+
+
+.line{
+    display: none;
+    width: 80%;
+    border-radius: 10px;
+    height: 5px;
+    background-color: white;
+    margin: 3px auto;
+    
+
+}
+.toggle-button .line{
+    background-color: black;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo{
+    font-size:2rem;
+}
+  .navbar-links li{
+    list-style: none;
+    display: inline;
+    width: 100%;
+    margin: 0 2rem;
+    font-size:2rem;
+}
+
+
+ @media screen and (max-width:650px) {
+   
+       .toggle-button{
+        border: 3px white solid;
+         display: flex;
+       }
+     .navbar-links{
+     display: none;
+      width: 100%;
+     }
+     .navBar{
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+     }
+     .navbar-links ul{
+         width: 100%;
+         flex-direction: column;
+     }
+     .navbar-links li{
+         width: 100%;
+         display:block;
+         text-align: center;
+         margin-bottom:1rem;
+     }
+
+
+    .line{
+        display: block;
+       
+    }
+
+    .navbar-links.active{
+        display:flex
+    }
+
+} 
