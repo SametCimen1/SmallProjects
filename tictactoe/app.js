@@ -1,5 +1,11 @@
 let isItX = true;
 const buttons = document.querySelectorAll(".box");
+const temp = document.querySelector(".cancel");
+temp.addEventListener("click", (e)=>{
+    e.preventDefault();
+    const bg = document.querySelector(".bg-modal");
+    bg.style.display = "none"
+})
 let isItOver = false;
 console.log(buttons)
 buttons.forEach((elem)=>{
