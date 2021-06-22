@@ -1,6 +1,6 @@
 let isItX = true;
 const buttons = document.querySelectorAll(".box");
-const temp = document.querySelector(".cancel");
+const temp = document.querySelector(".cancel"); // delete
 temp.addEventListener("click", (e)=>{
     e.preventDefault();
     const bg = document.querySelector(".bg-modal");
