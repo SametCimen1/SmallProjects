@@ -1,11 +1,7 @@
 let isItX = true;
 const buttons = document.querySelectorAll(".box");
-const temp = document.querySelector(".cancel"); // delete
-temp.addEventListener("click", (e)=>{
-    e.preventDefault();
-    const bg = document.querySelector(".bg-modal");
-    bg.style.display = "none"
-})
+player2Name = document.querySelector("#player2");
+
 let isItOver = false;
 console.log(buttons)
 buttons.forEach((elem)=>{
@@ -16,6 +12,16 @@ buttons.forEach((elem)=>{
     if(elem.textContent == "" ) {
     if(isItX){
        elem.textContent += "X";
+    //    if(player2Name.style.display === 'none'){
+    //     let isIt = false;
+    //     // while(isIt === false){
+    //     //     let rand = Math.random() * 9;
+    //     //     console.log(rand);
+            
+         
+    //     // }
+    //     // isItX = false;
+    //   }
      }
      else{
         elem.textContent += "O";
@@ -37,25 +43,25 @@ const check = () =>{
              if(num%3 === 0 &&buttons[num+1] != null &&buttons[num+2] != null && buttons[num].textContent !== "" &&buttons[num].textContent === buttons[num+1].textContent && buttons[num].textContent === buttons[num+2].textContent){
                 console.log(buttons[num+1].textContent); 
                 console.log(buttons[num+2].textContent); 
-                alert("you won right check");
+                over(isItX);
                  isItOver = true;
                  return;
              }
             // top && bottom check
              if((num === 6 || num === 7 || num === 8) &&buttons[num-3] != null &&buttons[num-6] != null  && buttons[num].textContent !== "" && buttons[num].textContent === buttons[num-3].textContent && buttons[num].textContent === buttons[num-6].textContent){
-                alert("you won top check");
+                over(isItX);
                 isItOver = true;
                 return;
             }
               // top left to bottom right check
               if(num === 0 &&buttons[num+4] != null &&buttons[num+8] != null  && buttons[num].textContent !== "" && buttons[num].textContent === buttons[num+4].textContent && buttons[num].textContent === buttons[num+8].textContent){
-                alert("you won diagnol check");
+                over(isItX);
                 isItOver = true;
                 return;
             }
             // top right to bottom left check
             if(num === 2 &&buttons[num+2] != null &&buttons[num+4] != null  && buttons[num].textContent !== "" && buttons[num].textContent === buttons[num+2].textContent && buttons[num].textContent === buttons[num+4].textContent){
-                alert("you won diagnol check");
+                over(isItX);
                 isItOver = true;
                 return;
             }
@@ -64,6 +70,6 @@ const check = () =>{
          }
     }
     if(howManyFull === 10){
-       alert("Draw");
+       draw();
     }
 }

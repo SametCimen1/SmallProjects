@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src = "app.js" async></script>
+    <script src = "js/playerLists.js" async></script>
+    <script src = "js/continue.js" async></script>
+    <script src = "js/app.js" async></script>
 </head>
 <body>
     <main>
@@ -37,15 +39,28 @@
           <div class = "box box9"></div>
         </section>
     </main>
+ 
+
     <div class = "bg-modal">
         <div class= "modal-content">
            <form class = "myForm">
-               <button class = "cancel">cancel</button>
-               <input type="text" id="player1" placeholder="Player1 Name">
-               <input type="text" id="player2" placeholder="Player2 Name">
-               <button class = "button">Continue</button>
+               <div class = "playerNum">
+                    <span class = "player playertwo">2 player</span>
+                    <span class = "player playerone">1 player</span>
+               </div>
+            
+                <input type="text" id="player1" placeholder="Player1 Name">
+                <input type="text" id="player2" placeholder="Player2 Name">
+                <button class = "button">Continue</button>
             </form>
         </div>
     </div>
+    <div class = "over">
+        <div class = "overContainer">
+            <h2 class = "whoWon"></h2>
+            <button class = "lastButton">Play Again</button>
+        </div>
+    </div>
+  
 </body>
 </html>
