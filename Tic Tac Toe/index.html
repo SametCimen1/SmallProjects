@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src = "app.js" async></script>
 </head>
 <body>
+    <main>
     <header>
         <div class = "headText">
             <p class = "ticTac">Tic Tac Toe</p>
@@ -19,7 +21,7 @@
     <div class = ""> <!-- Toggle -->
 
     </div>
-    <main>
+    
         <section class = "container"> <!-- grid -->
           <div class = "box box1"></div>
           <div class = "box box2"></div>
@@ -35,5 +37,14 @@
           <div class = "box box9"></div>
         </section>
     </main>
+    <div class = "bg-modal">
+        <div class= "modal-content">
+           <form class = "myForm">
+               <input type="text" id="player1" placeholder="Player1 Name">
+               <input type="text" id="player2" placeholder="Player2 Name">
+               <button class = "button">Continue</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
