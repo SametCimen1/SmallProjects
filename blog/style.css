@@ -71,19 +71,8 @@ border-radius: 10%;
 }
 
 
-.linkAndText{
-    background-color: rgba(0, 255, 255, 0.267);
-    width: 80%;
-    margin-left: 20%;
-    height: 80vh;
-    position:absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
+@media screen and (max-width:650px) {
 
- @media screen and (max-width:650px) {
     .toggle-button:hover{
         background-color: white;
     }
@@ -113,6 +102,7 @@ border-radius: 10%;
          text-align: center;
          margin-bottom:1rem;
      }
+     
     .line{
         display: block;  
     }
@@ -137,3 +127,60 @@ border-radius: 10%;
     }
 
 } 
+
+.linkAndText{
+    /* background-color: rgba(0, 255, 255, 0.267); */
+    width: 100%;
+    margin: 0 auto;
+    height: 80vh;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/*Text in main, Hey I am Samet and links for social Media*/
+.textContainer{
+background-color: rgb(10, 233, 233);
+margin-right:10%;
+}
+.welcome{
+    color: white;
+    font-size:1.5rem;
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.links{
+    text-align: center;
+    width: 100%;
+}
+.socialMedia{
+    width: 50px;
+    height: 50px;
+}
+
+
+/*for text*/
+@media screen and (min-width:900px) {
+    .welcome{
+        font-size:3rem;
+    }
+    .socialMedia{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width:900px){
+    main{
+        background-image: linear-gradient(rgba(122, 123, 124, 0), rgba(0, 0, 0, 0.7)), url("img/resizedjpg.jpg");
+    }
+
+    .textContainer{
+        background-color: rgb(10, 233, 233);
+        margin-right:0;
+        }
+}
