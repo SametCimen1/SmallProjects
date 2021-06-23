@@ -20,12 +20,12 @@ btn.addEventListener("click", (e)=>{
       screen.style.display = "none"
    } 
 })
-function over(isItX){
+function over(buttonText){
     myOver.style.display = "flex";
-    if(isItX){
+    if(buttonText === 'X'){
         whoWon.innerHTML = player1Name.value + " won"
     }
-    if(!isItX){
+    if(buttonText === 'O'){
         if(player2Name.style.display === "none"){
             whoWon.innerHTML += "Computer won"
         }

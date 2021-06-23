@@ -12,16 +12,20 @@ buttons.forEach((elem)=>{
     if(elem.textContent == "" ) {
     if(isItX){
        elem.textContent += "X";
-    //    if(player2Name.style.display === 'none'){
-    //     let isIt = false;
-    //     // while(isIt === false){
-    //     //     let rand = Math.random() * 9;
-    //     //     console.log(rand);
+       if(player2Name.style.display === 'none'){
+        let isIt = false;
+         while(isIt === false){
+            let rand = Math.floor(Math.random() * 10);
+            let btn = document.querySelector(".box" + rand);
+            if(btn !== null && btn.textContent === ""){
+               btn.textContent += "O" 
+             isIt = true;
+            }
             
-         
-    //     // }
-    //     // isItX = false;
-    //   }
+        }
+        
+        isItX = false;
+      }
      }
      else{
         elem.textContent += "O";
@@ -43,25 +47,26 @@ const check = () =>{
              if(num%3 === 0 &&buttons[num+1] != null &&buttons[num+2] != null && buttons[num].textContent !== "" &&buttons[num].textContent === buttons[num+1].textContent && buttons[num].textContent === buttons[num+2].textContent){
                 console.log(buttons[num+1].textContent); 
                 console.log(buttons[num+2].textContent); 
-                over(isItX);
+                over(buttons[num].textContent);
+                isIt
                  isItOver = true;
-                 return;
+                 return buttons[num+2].textContent;
              }
             // top && bottom check
              if((num === 6 || num === 7 || num === 8) &&buttons[num-3] != null &&buttons[num-6] != null  && buttons[num].textContent !== "" && buttons[num].textContent === buttons[num-3].textContent && buttons[num].textContent === buttons[num-6].textContent){
-                over(isItX);
+               over(buttons[num].textContent);
                 isItOver = true;
                 return;
             }
               // top left to bottom right check
               if(num === 0 &&buttons[num+4] != null &&buttons[num+8] != null  && buttons[num].textContent !== "" && buttons[num].textContent === buttons[num+4].textContent && buttons[num].textContent === buttons[num+8].textContent){
-                over(isItX);
+               over(buttons[num].textContent);
                 isItOver = true;
                 return;
             }
             // top right to bottom left check
             if(num === 2 &&buttons[num+2] != null &&buttons[num+4] != null  && buttons[num].textContent !== "" && buttons[num].textContent === buttons[num+2].textContent && buttons[num].textContent === buttons[num+4].textContent){
-                over(isItX);
+               over(buttons[num].textContent);
                 isItOver = true;
                 return;
             }
