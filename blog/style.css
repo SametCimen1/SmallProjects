@@ -5,7 +5,7 @@
 }
 
 main{
-    min-height: 98vh;
+    min-height: 100vh;
     width: 100%;
     max-width: 100%;
     background-image: linear-gradient(rgba(122, 123, 124, 0), rgba(0, 0, 0, 0.7)), url("img/background7.JPG");
@@ -18,31 +18,23 @@ main{
     min-height: 50px;
     width: 90%;
     margin:0 auto;
-
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
 .toggle-button{   
-    display: none;
+    cursor: default;
     display: none;
     position: absolute;
     right:0;
     top: 0;
-    border-radius: 9px;
+    border-radius: 5px;
     height: 40px;
     width: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
 }
 
-.toggle-button:hover{
 
-    background-color: white;
-}
 
 
 .line{
@@ -53,11 +45,9 @@ main{
     background-color: white;
     margin: 3px auto;
     
-
-}
-.toggle-button .line{
     background-color: black;
 }
+
 
 .navbar-links{
     display: flex;
@@ -72,14 +62,37 @@ main{
     width: 100%;
     margin: 0 2rem;
     font-size:2rem;
+    cursor: pointer;
+    
+}
+.navbar-links li:hover{
+background-color: rgba(90, 93, 93, 0.534);
+border-radius: 10%;
 }
 
 
+.linkAndText{
+    background-color: rgba(0, 255, 255, 0.267);
+    width: 80%;
+    margin-left: 20%;
+    height: 80vh;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
  @media screen and (max-width:650px) {
-   
+    .toggle-button:hover{
+        background-color: white;
+    }
        .toggle-button{
-        border: 3px white solid;
-         display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+       
        }
      .navbar-links{
      display: none;
@@ -100,15 +113,27 @@ main{
          text-align: center;
          margin-bottom:1rem;
      }
-
-
     .line{
-        display: block;
-       
+        display: block;  
     }
-
     .navbar-links.active{
-        display:flex
+        display:flex;
+        color: white;
+    }
+    
+    
+    .navbar-links li{
+        width: 50%;
+        margin: 0 auto;
+        font-size:2rem;
+    }
+    .navbar-links li:hover{
+      background-color: rgba(90, 93, 93, 0.534);
+      border-radius: 10%;
+    }
+    .navBar.active{
+        background-color: rgba(0, 0, 0, 0.424);
+        width: 100%;
     }
 
 } 
