@@ -214,26 +214,31 @@ margin-right:10%;
   height: 100%;
   width: 100%;
 }
-.hoverThis{
-    display: inline;
 
-    width: 100%;
-    height: 100%;
-   
-}
 
-.socialMedia:hover{
+
+
+
+.mouseHoverIn{
     transform:translateY(-10px);
     transition: 1s ease-out;
     fill:white;
-  
+}
+.mouseHoverOut{
+    transform:translateY(0px);
+    transition: 1s ease-out;
+    fill:rgb(0, 0, 0);
+}
+.mouseHoverInText{
+    transform:translateY(-10px);
+    transform: scale(1.1);
+    transition: 1s ease-out;
+    color:black;
 }
 
-@keyframes Out {
-    0%{
-        fill:black;
-    }
-    100%{
-        fill: white;
-    }
+.mouseHoverOutText{
+    transform:translateY(0px);
+    transform: scale(1);
+    transition: 1s ease-out;
+    color:white;
 }
