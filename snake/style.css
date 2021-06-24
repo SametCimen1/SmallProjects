@@ -11,9 +11,10 @@ main{
     grid-template-columns: repeat(auto-fill, 20px);
     grid-template-rows: repeat(auto-fill, 20px);   
 }
-.player{
+.player, .food{
     position:relative;
-
-    background-color: aliceblue;
-    
+    background-color: aliceblue;   
+}
+.food{
+    background-color: red;
 }
