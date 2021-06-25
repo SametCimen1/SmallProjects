@@ -90,7 +90,8 @@ color: rgb(233, 233, 233);
 @media screen and (max-width:650px) {
 
     .toggle-button:hover{
-        background-color: white;
+        background-color: rgba(90, 93, 93, 0.534);
+        border-radius: 10%;
     }
        .toggle-button{
         display: flex;
@@ -142,6 +143,10 @@ color: rgb(233, 233, 233);
         width: 100%;
     }
 
+    .navBar{
+        left: 0;
+        width: 100%;
+    }
 } 
 
 .linkAndText{
