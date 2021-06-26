@@ -270,7 +270,6 @@ margin-right:10%;
     padding-bottom: 5rem;
 }
 .textAndImgContainer{
-    background-color: aquamarine;
     margin: 0 0;
 }
 
@@ -290,14 +289,14 @@ margin-right:10%;
     align-items: center;
     justify-content: center;
     width: 90%;
-    background-color: aliceblue;
+  
     margin: 1rem auto;
 }
 .myText{
     width: 100%;
     margin-top: 1rem;
     text-align: center;
-    background-color: rgb(219, 121, 0);
+  
     font-size:1.5rem;
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -417,3 +416,15 @@ border-radius: 90%;
     }
 
  }
+
+
+/*card links*/
+.cardLinks{
+    text-decoration: none;
+    color: black;
+}
+
+
+.fix{
+    border-radius: 10px;
+}
