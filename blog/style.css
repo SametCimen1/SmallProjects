@@ -271,7 +271,7 @@ margin-right:10%;
 }
 .textAndImgContainer{
     background-color: aquamarine;
-    margin: 0 1rem;
+    margin: 0 0;
 }
 
 .aboutMe{
@@ -290,11 +290,11 @@ margin-right:10%;
     align-items: center;
     justify-content: center;
     width: 90%;
+    background-color: aliceblue;
     margin: 1rem auto;
 }
 .myText{
-    width: 20%;
-    min-width: 400px;
+    width: 100%;
     margin-top: 1rem;
     text-align: center;
     background-color: bisque;
@@ -321,6 +321,10 @@ margin-right:10%;
         background-color: aqua;
      
     }
+    .textAndImgContainer{
+        margin: 0 1rem;
+    }
+    
 }
 
 .projects{
