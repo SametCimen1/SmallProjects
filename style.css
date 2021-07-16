@@ -134,3 +134,12 @@ img{
     align-items: center;
 }
 
+
+/*delet .spin later*/
+.spin{
+    background-color: #2f2f2f;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
