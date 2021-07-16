@@ -15,11 +15,11 @@ body{
  /*Change the img from PS. The left side and right side margin deosnt match*/
     color: white;
     box-sizing: border-box;
-    background-image: linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url("img/try44.jpg");
+    /* background-image: linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url("img/try44.jpg");
     background-position: center center;
     background-size:cover;
     background-attachment: fixed;
-    background-color: black;
+    background-color: black; */
 }
 /* .container{
   min-height: 100vh;
@@ -48,9 +48,9 @@ header {
     h1{
         font-size: 5rem;
     }
-    body{
+    /* body{
         background-image: linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url("img/try11.jpg");
-    }
+    } */
 }
 @media screen and (max-width:400px){ /*for iphone x, delete later*/ 
     body{
